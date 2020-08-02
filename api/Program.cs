@@ -22,7 +22,10 @@ namespace api
             try
             {
                 Log.Information("Starting up");
-                CreateHostBuilder(args).Build().Run();
+                CreateHostBuilder(args)
+                .UseSystemd()
+                .Build()
+                .Run();
             }
             catch (Exception ex)
             {
