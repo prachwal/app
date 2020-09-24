@@ -5,7 +5,7 @@ namespace test
 {
     public class Tests
     {
-        public WeatherForecast WeatherForecast { get; private set; }
+        public IWeatherForecast WeatherForecast { get; private set; }
 
         [SetUp]
         public void Setup()

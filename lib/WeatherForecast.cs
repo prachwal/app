@@ -2,7 +2,7 @@ using System;
 
 namespace lib
 {
-    public class WeatherForecast
+    public class WeatherForecast : IWeatherForecast
     {
         public DateTime Date { get; set; }
 
