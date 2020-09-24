@@ -23,8 +23,6 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: Test
       run: dotnet test --no-restore --verbosity normal
-    - name: Addsource
-      run: dotnet nuget add source https://nuget.pkg.github.com/prachwal/index.json -n github -u prachwal -p GH_TOKEN
     - name: Pack
       run: dotnet pack --configuration Release
     - name: Push
