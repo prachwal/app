@@ -29,8 +29,7 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
     - name: Pack
-      run: mkdir pack
-        dotnet pack --configuration Release --output ./pack/
+      run: dotnet pack --configuration Release --output ./pack/
     - name: Publish package
       run: dotnet nuget push "pack/*.nupkg" --skip-duplicate
       env:
