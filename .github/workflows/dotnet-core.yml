@@ -33,6 +33,7 @@ jobs:
     - name: Pack
       run: dotnet pack --configuration Release
     - name: Publish the package to GPR
-      run: dotnet nuget push "tool/bin/Release/*.nupkg" --skip-duplicate
+      run: dotnet nuget push "app/bin/Release/*.nupkg" --skip-duplicate
+        dotnet nuget push "tool/bin/Release/*.nupkg" --skip-duplicate
       env:
         PUBLISH_TO_GITHUB_COM: ${{ secrets.GH_TOKEN }}
