@@ -29,10 +29,9 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
     - name: Pack
-      run: dotnet pack --configuration Release
+      run: mkdir pack
+        dotnet pack --configuration Release --output ./pack/
     - name: Publish package
-      run: dotnet nuget push "lib/bin/Release/*.nupkg" --skip-duplicate
-        dotnet nuget push "tool/bin/Release/*.nupkg" --skip-duplicate
-        dotnet nuget push "api/bin/Release/*.nupkg" --skip-duplicate
+      run: dotnet nuget push "pack/*.nupkg" --skip-duplicate
       env:
         PUBLISH_TO_GITHUB_COM: ${{ secrets.GH_TOKEN }}
