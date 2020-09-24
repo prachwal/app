@@ -19,7 +19,7 @@
     <UserSecretsId>24b8b622-490d-4086-aa10-97dc4d79d8fa</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <RepositoryUrl>https://github.com/prachwal/app</RepositoryUrl>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <IsPackable>true</IsPackable>
   </PropertyGroup>
 
