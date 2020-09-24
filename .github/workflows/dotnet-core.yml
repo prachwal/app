@@ -24,7 +24,7 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
     - name: Test Add source
-      run: dotnet nuget add source --help
+      run: dotnet nuget --help
     - name: Pack
       run: dotnet pack --configuration Release
     - name: Push
